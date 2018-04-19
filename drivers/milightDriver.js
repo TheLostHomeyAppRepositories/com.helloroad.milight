@@ -81,8 +81,9 @@ class MilightDriver extends Homey.Driver {
 					const results = [];
 					if (Array.isArray(bridges)) {
 						for (let i = 0; i < bridges.length; i++) {
+							if (typeof bridges[i].getZones !== 'function') continue;
 							const zones = bridges[i].getZones(this.driverType);
-							if (!Array.isArray(zones)) break;
+							if (!Array.isArray(zones)) continue;
 							for (let j = 0; j < zones.length; j++) {
 								results.push({
 									name: (bridges[i].bridgeVersion === 6) ? `iBox Bridge ${parseInt(i) + 1} ${zones[j].name}` : `Bridge ${parseInt(i) + 1} ${zones[j].name}`,
