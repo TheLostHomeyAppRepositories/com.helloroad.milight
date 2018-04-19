@@ -99,7 +99,7 @@ class MilightDriver extends Homey.Driver {
 					}
 					return callback(null, results);
 				})
-				.catch(err => callback(err.stack, false));
+				.catch(err => callback(err, false));
 		});
 		socket.on('disconnect', () => setTimeout(() => Homey.app.BridgeManager.deregisterTempBridges, 30000));
 	}
