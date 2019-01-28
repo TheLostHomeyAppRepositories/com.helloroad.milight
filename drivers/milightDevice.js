@@ -129,6 +129,7 @@ class MilightDevice extends WifiDevice {
 	 * @returns {Promise}
 	 */
 	onCapabilityDim(dim) {
+		this.setCapabilityValue('dim', dim);
 		if (dim < 0.01) this.setCapabilityValue('onoff', false);
 		else this.setCapabilityValue('onoff', true);
 		return this.zone.setBrightness(dim);
@@ -140,6 +141,7 @@ class MilightDevice extends WifiDevice {
 	 * @returns {Promise}
 	 */
 	onCapabilityLightHue(hue) {
+		this.setCapabilityValue('light_hue', hue);
 		if (this.getSetting('invert_red_and_green') === true) {
 			const red = onecolor(`hsl(${hue * 360}, 1, 1)`).red();
 			const green = onecolor(`hsl(${hue * 360}, 1, 1)`).green();
@@ -161,6 +163,7 @@ class MilightDevice extends WifiDevice {
 	 */
 	onCapabilityLightSaturation(saturation) {
 		this.setCapabilityValue('onoff', true);
+		this.setCapabilityValue('light_saturation', saturation);
 		if (this.hasCapability('light_mode')) this.setCapabilityValue('light_mode', 'color');
 		return this.zone.setSaturation(saturation);
 	}
@@ -172,6 +175,7 @@ class MilightDevice extends WifiDevice {
 	 */
 	onCapabilityLightTemperature(temperature) {
 		this.setCapabilityValue('onoff', true);
+		this.setCapabilityValue('light_temperature', temperature);
 		if (this.hasCapability('light_mode')) this.setCapabilityValue('light_mode', 'temperature');
 		return this.zone.setTemperature(temperature);
 	}
@@ -183,6 +187,7 @@ class MilightDevice extends WifiDevice {
 	 */
 	onCapabilityLightMode(mode) {
 		this.setCapabilityValue('onoff', true);
+		this.setCapabilityValue('light_mode', mode);
 		switch (mode) {
 			case 'temperature':
 				return this.zone.enableWhiteMode(this.getCapabilityValue('light_temperature'));

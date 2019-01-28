@@ -12,6 +12,8 @@ Also compatible with:
 - Kreuzer
 
 ### Changelog
+v3.1.10
+- Fixes updating capability values when changed
 
 v3.1.7
 - Minor fixes to device settings
