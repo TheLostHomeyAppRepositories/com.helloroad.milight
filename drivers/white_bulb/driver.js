@@ -1,13 +1,14 @@
 'use strict';
 
-const MilightDriver = require('./../milightDriver');
+const Driver = require('../../lib/GenericDriver');
+const { ZONE_TYPE } = require('../../lib/constants');
 
-class MilightWHITEDriver extends MilightDriver {
-	onInit() {
-		super.onInit({
-			driverType: 'WHITE',
-		});
-	}
+class MilightWhiteDriver extends Driver {
+  onInit() {
+    super.onInit({
+      driverType: ZONE_TYPE.WHITE,
+    });
+  }
 }
 
-module.exports = MilightWHITEDriver;
+module.exports = MilightWhiteDriver;

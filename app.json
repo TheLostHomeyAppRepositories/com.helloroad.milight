@@ -1,16 +1,16 @@
 {
   "id": "com.milight",
-  "version": "3.1.10",
+  "version": "3.2.2",
   "compatibility": ">=1.5.0",
   "category": "lights",
   "sdk": 2,
   "name": {
-    "en": "Milight (EasyBulb)",
-    "nl": "Milight (EasyBulb)"
+    "en": "Mi•Light",
+    "nl": "Mi•Light"
   },
   "description": {
-    "en": "Connect your Milight (EasyBulb) light bulbs with Homey",
-    "nl": "Verbind je Milight (EasyBulb) lampen met Homey"
+    "en": "Connect your Mi•Light devices with Homey",
+    "nl": "Verbind je Mi•Light apparaten met Homey"
   },
   "author": {
     "name": "Athom B.V."
@@ -27,12 +27,38 @@
     "large": "./assets/images/large.jpg",
     "small": "./assets/images/small.jpg"
   },
+  "capabilities": {
+    "enableWhiteMode": {
+      "type": "boolean",
+      "title": {
+        "en": "Enable white mode",
+        "nl": "Activeer wit modus"
+      },
+      "setable": true
+    },
+    "enableNightMode": {
+      "type": "boolean",
+      "title": {
+        "en": "Enable night mode",
+        "nl": "Activeer nacht modus"
+      },
+      "setable": true
+    },
+    "toggleScene": {
+      "type": "boolean",
+      "title": {
+        "en": "Toggle effect mode",
+        "nl": "Activeer effect modus"
+      },
+      "setable": true
+    }
+  },
   "drivers": [
     {
       "id": "rgbww_bulb",
       "name": {
-        "en": "RGBWW Bulb",
-        "nl": "RGBWW Lamp"
+        "en": "RGBWW Zone",
+        "nl": "RGBWW Zone"
       },
       "images": {
         "large": "./drivers/rgbww_bulb/assets/images/large.jpg",
@@ -45,7 +71,10 @@
         "light_hue",
         "light_saturation",
         "light_temperature",
-        "light_mode"
+        "light_mode",
+        "enableWhiteMode",
+        "enableNightMode",
+        "toggleScene"
       ],
       "capabilitiesOptions": {
         "onoff": {
@@ -54,8 +83,28 @@
       },
       "pair": [
         {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true,
+            "title": {
+              "en": "Select a bridge",
+              "nl": "Selecteer een bridge"
+            }
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
           "id": "list_devices",
           "template": "list_devices",
+          "options": {
+            "title": {
+              "en": "Select the zones you'd like to add",
+              "nl": "Selecteer de zones die je wil toevoegen"
+            }
+          },
           "navigation": {
             "next": "add_devices"
           }
@@ -66,6 +115,42 @@
         }
       ],
       "settings": [
+        {
+          "id": "bridge_driver_type",
+          "type": "label",
+          "label": {
+            "en": "Zone type",
+            "nl": "Zone type"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_zone_number",
+          "type": "label",
+          "label": {
+            "en": "Bridge zone",
+            "nl": "Bridge zone"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_mac_address",
+          "type": "label",
+          "label": {
+            "en": "Bridge MAC address",
+            "nl": "Bridge MAC adres"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_ip_address",
+          "type": "label",
+          "label": {
+            "en": "Bridge IP address",
+            "nl": "Bridge IP adres"
+          },
+          "value": ""
+        },
         {
           "id": "invert_red_and_green",
           "type": "checkbox",
@@ -102,8 +187,8 @@
     {
       "id": "rgbw_bulb",
       "name": {
-        "en": "RGBW Bulb",
-        "nl": "RGBW Lamp"
+        "en": "RGBW Zone",
+        "nl": "RGBW Zone"
       },
       "images": {
         "large": "./drivers/rgbw_bulb/assets/images/large.jpg",
@@ -114,8 +199,9 @@
         "onoff",
         "dim",
         "light_hue",
-        "light_temperature",
-        "light_mode"
+        "enableWhiteMode",
+        "enableNightMode",
+        "toggleScene"
       ],
       "capabilitiesOptions": {
         "onoff": {
@@ -123,6 +209,16 @@
         }
       },
       "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
         {
           "id": "list_devices",
           "template": "list_devices",
@@ -136,6 +232,42 @@
         }
       ],
       "settings": [
+        {
+          "id": "bridge_driver_type",
+          "type": "label",
+          "label": {
+            "en": "Zone type",
+            "nl": "Zone type"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_zone_number",
+          "type": "label",
+          "label": {
+            "en": "Bridge zone",
+            "nl": "Bridge zone"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_mac_address",
+          "type": "label",
+          "label": {
+            "en": "Bridge MAC address",
+            "nl": "Bridge MAC adres"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_ip_address",
+          "type": "label",
+          "label": {
+            "en": "Bridge IP address",
+            "nl": "Bridge IP adres"
+          },
+          "value": ""
+        },
         {
           "id": "invert_red_and_green",
           "type": "checkbox",
@@ -172,8 +304,8 @@
     {
       "id": "rgb_bulb",
       "name": {
-        "en": "RGB Bulb",
-        "nl": "RGB Lamp"
+        "en": "RGB Zone",
+        "nl": "RGB Zone"
       },
       "images": {
         "large": "./drivers/rgb_bulb/assets/images/large.jpg",
@@ -192,6 +324,16 @@
       },
       "pair": [
         {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
           "id": "list_devices",
           "template": "list_devices",
           "navigation": {
@@ -204,6 +346,42 @@
         }
       ],
       "settings": [
+        {
+          "id": "bridge_driver_type",
+          "type": "label",
+          "label": {
+            "en": "Zone type",
+            "nl": "Zone type"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_zone_number",
+          "type": "label",
+          "label": {
+            "en": "Bridge zone",
+            "nl": "Bridge zone"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_mac_address",
+          "type": "label",
+          "label": {
+            "en": "Bridge MAC address",
+            "nl": "Bridge MAC adres"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_ip_address",
+          "type": "label",
+          "label": {
+            "en": "Bridge IP address",
+            "nl": "Bridge IP adres"
+          },
+          "value": ""
+        },
         {
           "id": "invert_red_and_green",
           "type": "checkbox",
@@ -240,8 +418,8 @@
     {
       "id": "white_bulb",
       "name": {
-        "en": "White Bulb",
-        "nl": "Witte Lamp"
+        "en": "White Zone",
+        "nl": "Wit Zone"
       },
       "images": {
         "large": "./drivers/white_bulb/assets/images/large.jpg",
@@ -251,7 +429,8 @@
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "enableNightMode"
       ],
       "capabilitiesOptions": {
         "onoff": {
@@ -259,6 +438,16 @@
         }
       },
       "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
         {
           "id": "list_devices",
           "template": "list_devices",
@@ -269,6 +458,289 @@
         {
           "id": "add_devices",
           "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "id": "bridge_driver_type",
+          "type": "label",
+          "label": {
+            "en": "Zone type",
+            "nl": "Zone type"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_zone_number",
+          "type": "label",
+          "label": {
+            "en": "Bridge zone",
+            "nl": "Bridge zone"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_mac_address",
+          "type": "label",
+          "label": {
+            "en": "Bridge MAC address",
+            "nl": "Bridge MAC adres"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_ip_address",
+          "type": "label",
+          "label": {
+            "en": "Bridge IP address",
+            "nl": "Bridge IP adres"
+          },
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "ibox_bulb",
+      "name": {
+        "en": "iBox Zone",
+        "nl": "iBox Zone"
+      },
+      "images": {
+        "large": "./drivers/ibox_bulb/assets/images/large.png",
+        "small": "./drivers/ibox_bulb/assets/images/small.png"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "enableWhiteMode"
+      ],
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "id": "bridge_driver_type",
+          "type": "label",
+          "label": {
+            "en": "Zone type",
+            "nl": "Zone type"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_zone_number",
+          "type": "label",
+          "label": {
+            "en": "Bridge zone",
+            "nl": "Bridge zone"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_mac_address",
+          "type": "label",
+          "label": {
+            "en": "Bridge MAC address",
+            "nl": "Bridge MAC adres"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_ip_address",
+          "type": "label",
+          "label": {
+            "en": "Bridge IP address",
+            "nl": "Bridge IP adres"
+          },
+          "value": ""
+        },
+        {
+          "id": "invert_red_and_green",
+          "type": "checkbox",
+          "value": false,
+          "label": {
+            "en": "Invert red and green values",
+            "nl": "Wissel rode en groene waarden om"
+          },
+          "hint": {
+            "en": "Some Milight lights have the red and green values switched. If Homey sets a different color on your light than expected, enable this setting.",
+            "nl": "Sommige Milight lampen hebben de rode en groene waarden omgedraait. Als Homey een andere kleur instelt op de lamp dan verwacht, vink dan deze checkbox aan."
+          }
+        },
+        {
+          "id": "hue_calibration",
+          "type": "number",
+          "value": 0,
+          "attr": {
+            "min": -0.5,
+            "max": 0.5,
+            "step": 0.01
+          },
+          "label": {
+            "en": "Hue calibration",
+            "nl": "Kleur tint kalibratie"
+          },
+          "hint": {
+            "en": "Use this value to calibrate the hue value send to the device. This can be used to compensate for deviating colors.",
+            "nl": "Gebruik deze waarde om de kleur tint te kalibreren. Dit kan gebruikt worden om te compenseren voor afwijkende kleuren."
+          }
+        }
+      ]
+    },
+    {
+      "id": "8_zone_controller",
+      "name": {
+        "en": "8-Zone Controller",
+        "nl": "8-Zone Controller"
+      },
+      "images": {
+        "large": "./drivers/8_zone_controller/assets/images/large.jpg",
+        "small": "./drivers/8_zone_controller/assets/images/small.jpg"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode",
+        "enableWhiteMode",
+        "enableNightMode",
+        "toggleScene"
+      ],
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true,
+            "title": {
+              "en": "Select a bridge",
+              "nl": "Selecteer een bridge"
+            }
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "options": {
+            "title": {
+              "en": "Select the zones you'd like to add",
+              "nl": "Selecteer de zones die je wil toevoegen"
+            }
+          },
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "id": "bridge_driver_type",
+          "type": "label",
+          "label": {
+            "en": "Zone type",
+            "nl": "Zone type"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_zone_number",
+          "type": "label",
+          "label": {
+            "en": "Bridge zone",
+            "nl": "Bridge zone"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_mac_address",
+          "type": "label",
+          "label": {
+            "en": "Bridge MAC address",
+            "nl": "Bridge MAC adres"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_ip_address",
+          "type": "label",
+          "label": {
+            "en": "Bridge IP address",
+            "nl": "Bridge IP adres"
+          },
+          "value": ""
+        },
+        {
+          "id": "invert_red_and_green",
+          "type": "checkbox",
+          "value": false,
+          "label": {
+            "en": "Invert red and green values",
+            "nl": "Wissel rode en groene waarden om"
+          },
+          "hint": {
+            "en": "Some Milight lights have the red and green values switched. If Homey sets a different color on your light than expected, enable this setting.",
+            "nl": "Sommige Milight lampen hebben de rode en groene waarden omgedraait. Als Homey een andere kleur instelt op de lamp dan verwacht, vink dan deze checkbox aan."
+          }
+        },
+        {
+          "id": "hue_calibration",
+          "type": "number",
+          "value": 0,
+          "attr": {
+            "min": -0.5,
+            "max": 0.5,
+            "step": 0.01
+          },
+          "label": {
+            "en": "Hue calibration",
+            "nl": "Kleur tint kalibratie"
+          },
+          "hint": {
+            "en": "Use this value to calibrate the hue value send to the device. This can be used to compensate for deviating colors.",
+            "nl": "Gebruik deze waarde om de kleur tint te kalibreren. Dit kan gebruikt worden om te compenseren voor afwijkende kleuren."
+          }
         }
       ]
     }
@@ -307,7 +779,7 @@
         "id": "disco_mode",
         "title": {
           "en": "Enable random effect mode",
-          "nl": "Zet willekeurige effect modus aan"
+          "nl": "Activeer willekeurige effect modus"
         },
         "args": [
           {
@@ -321,7 +793,7 @@
         "id": "disco_mode_specific",
         "title": {
           "en": "Enable specific effect mode",
-          "nl": "Zet specifieke effect modus aan"
+          "nl": "Activeer specifieke effect modus"
         },
         "hint": {
           "en": "Setting a specific effect mode is only possible for RGBW(W) bulbs connected to the new iBox (with built-in light).",
@@ -409,7 +881,7 @@
         "id": "disco_mode",
         "title": {
           "en": "Enable random effect mode",
-          "nl": "Zet willekeurige effect modus aan"
+          "nl": "Activeer willekeurige effect modus"
         },
         "args": [
           {
@@ -423,7 +895,7 @@
         "id": "disco_mode_specific",
         "title": {
           "en": "Enable specific effect mode",
-          "nl": "Zet specifieke effect modus aan"
+          "nl": "Activeer specifieke effect modus"
         },
         "hint": {
           "en": "Setting a specific effect mode is only possible for RGBW(W) bulbs connected to the new iBox (with built-in light).",
@@ -511,7 +983,7 @@
         "id": "enable_night_mode",
         "title": {
           "en": "Enable night mode",
-          "nl": "Schakel nacht modus in"
+          "nl": "Activeer nacht modus"
         },
         "args": [
           {
@@ -525,7 +997,7 @@
         "id": "enable_night_mode",
         "title": {
           "en": "Enable night mode",
-          "nl": "Schakel nacht modus in"
+          "nl": "Activeer nacht modus"
         },
         "args": [
           {

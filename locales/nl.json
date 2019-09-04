@@ -1,8 +1,3 @@
 {
-	"no_response": "Bridge reageert niet",
-	"initializing": "Bezig met verbinden...",
-	"not_found": "Dit apparaat kon niet worden gevonden",
-	"pair": {
-		"title": "Selecteer de apparaten die je wilt toevoegen"
-	}
+	"no_response": "Bridge reageert niet"
 }

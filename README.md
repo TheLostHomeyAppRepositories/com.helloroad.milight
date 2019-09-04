@@ -1,17 +1,39 @@
-# MiLight (EasyBulb) app for Homey  
-Connect your MiLight (EasyBulb) light bulbs with Homey.
+# Mi•Light app for Homey
+Connect your Mi•Light devices with Homey.
 
-Homey connects with your WiFi bridge to control the lights.
+Homey connects with your Mi•Light WiFi bridge to control the lights.
 
-Also compatible with:
+Supported bridges:
+- First generation WiFi box
+- Second generation WiFi iBox1
+- Third generation WiFi iBox2
+
+Mi•Light devices are also known as:
+- EasyBulb
+- AppLight
+- AppLamp
+- LEDme
+- Dekolight
 - Rocket LED
-- Limitless LED Applamp
-- s`luce
+- s.LUCE
 - iLight
 - iBulb
 - Kreuzer
 
 ### Changelog
+v3.2.2
+- Minor crash preventive fixes
+
+v3.2.1
+- Added support for 8-Zone Controller (Bèta)
+- Added driver for iBox light device
+- Added button capabilities for night-, white- and effectmode (re-pair needed, not all devices support this)
+- Added device and bridge information in device settings
+- Added nested pairing wizard (bridges > devices)
+- Improved speed and reliability of pairing wizard
+- Fixed a bug where bridges would become unreachable after changing IP address
+- Added retry functionality to all ‘retryable’ commands, improving reliability
+
 v3.1.10
 - Fixes updating capability values when changed
 

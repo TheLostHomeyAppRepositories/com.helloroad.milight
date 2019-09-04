@@ -1,8 +1,3 @@
 {
-	"no_response": "Bridge is not responding",
-	"initializing": "Connecting...",
-	"not_found": "This device could not be found",
-	"pair": {
-		"title": "Select the devices you want to add"
-	}
+	"no_response": "Bridge is not responding"
 }
