@@ -1,6 +1,7 @@
 {
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "com.helloroad.milight",
-  "version": "4.1.0",
+  "version": "4.2.0",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "platforms": [
@@ -25,13 +26,1125 @@
     "name": "Vincent Steenhoute",
     "email": "vincent@steen.fr"
   },
- "homepage": "https://github.com/overciv/homey-milight-app",
- "source": "https://github.com/overciv/homey-milight-app",
+  "homepage": "https://github.com/overciv/homey-milight-app",
+  "source": "https://github.com/overciv/homey-milight-app",
   "contributors": {
     "developers": [
       {
         "name": "HVerkiel"
       }
     ]
+  },
+  "flow": {
+    "actions": [
+      {
+        "id": "disco_mode",
+        "title": {
+          "en": "Enable random effect mode",
+          "nl": "Activeer willekeurige effect modus"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_uri=homey:app:com.milight&driver_id=rgbw_bulb"
+          }
+        ]
+      },
+      {
+        "id": "disco_mode_faster",
+        "title": {
+          "en": "Speed up disco mode",
+          "nl": "Versnel effect modus"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_uri=homey:app:com.milight&driver_id=rgbw_bulb"
+          }
+        ]
+      },
+      {
+        "id": "disco_mode_faster_rgbww",
+        "title": {
+          "en": "Speed up disco mode",
+          "nl": "Versnel effect modus"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_uri=homey:app:com.milight&driver_id=rgbww_bulb"
+          }
+        ]
+      },
+      {
+        "id": "disco_mode_rgbww",
+        "title": {
+          "en": "Enable random effect mode",
+          "nl": "Activeer willekeurige effect modus"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_uri=homey:app:com.milight&driver_id=rgbww_bulb"
+          }
+        ]
+      },
+      {
+        "id": "disco_mode_slower",
+        "title": {
+          "en": "Speed down disco mode",
+          "nl": "Vertraag effect modus"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_uri=homey:app:com.milight&driver_id=rgbw_bulb"
+          }
+        ]
+      },
+      {
+        "id": "disco_mode_slower_rgbww",
+        "title": {
+          "en": "Speed down disco mode",
+          "nl": "Vertraag effect modus"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_uri=homey:app:com.milight&driver_id=rgbww_bulb"
+          }
+        ]
+      },
+      {
+        "id": "disco_mode_specific",
+        "title": {
+          "en": "Enable specific effect mode",
+          "nl": "Activeer specifieke effect modus"
+        },
+        "hint": {
+          "en": "Setting a specific effect mode is only possible for RGBW(W) bulbs connected to the new iBox (with built-in light).",
+          "nl": "Het instellen van eeen specifieke effect modus is alleen mogelijk bij RGBW(W) lampen die zijn verbonden met de nieuwe iBox (met ingebouwde lamp)."
+        },
+        "args": [
+          {
+            "name": "mode",
+            "type": "dropdown",
+            "value": "1",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Effect mode 1",
+                  "nl": "Effect modus 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Effect mode 2",
+                  "nl": "Effect modus 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Effect mode 3",
+                  "nl": "Effect modus 3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Effect mode 4",
+                  "nl": "Effect modus 4"
+                }
+              },
+              {
+                "id": "5",
+                "label": {
+                  "en": "Effect mode 5",
+                  "nl": "Effect modus 5"
+                }
+              },
+              {
+                "id": "6",
+                "label": {
+                  "en": "Effect mode 6",
+                  "nl": "Effect modus 6"
+                }
+              },
+              {
+                "id": "7",
+                "label": {
+                  "en": "Effect mode 7",
+                  "nl": "Effect modus 7"
+                }
+              },
+              {
+                "id": "8",
+                "label": {
+                  "en": "Effect mode 8",
+                  "nl": "Effect modus 8"
+                }
+              },
+              {
+                "id": "9",
+                "label": {
+                  "en": "Effect mode 9",
+                  "nl": "Effect modus 9"
+                }
+              }
+            ]
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_uri=homey:app:com.milight&driver_id=rgbw_bulb"
+          }
+        ]
+      },
+      {
+        "id": "disco_mode_specific_rgbww",
+        "title": {
+          "en": "Enable specific effect mode",
+          "nl": "Activeer specifieke effect modus"
+        },
+        "hint": {
+          "en": "Setting a specific effect mode is only possible for RGBW(W) bulbs connected to the new iBox (with built-in light).",
+          "nl": "Het instellen van eeen specifieke effect modus is alleen mogelijk bij RGBW(W) lampen die zijn verbonden met de nieuwe iBox (met ingebouwde lamp)."
+        },
+        "args": [
+          {
+            "name": "mode",
+            "type": "dropdown",
+            "value": "1",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Effect mode 1",
+                  "nl": "Effect modus 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Effect mode 2",
+                  "nl": "Effect modus 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Effect mode 3",
+                  "nl": "Effect modus 3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Effect mode 4",
+                  "nl": "Effect modus 4"
+                }
+              },
+              {
+                "id": "5",
+                "label": {
+                  "en": "Effect mode 5",
+                  "nl": "Effect modus 5"
+                }
+              },
+              {
+                "id": "6",
+                "label": {
+                  "en": "Effect mode 6",
+                  "nl": "Effect modus 6"
+                }
+              },
+              {
+                "id": "7",
+                "label": {
+                  "en": "Effect mode 7",
+                  "nl": "Effect modus 7"
+                }
+              },
+              {
+                "id": "8",
+                "label": {
+                  "en": "Effect mode ",
+                  "nl": "Effect modus 8"
+                }
+              },
+              {
+                "id": "9",
+                "label": {
+                  "en": "Effect mode 9",
+                  "nl": "Effect modus 9"
+                }
+              }
+            ]
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_uri=homey:app:com.milight&driver_id=rgbww_bulb"
+          }
+        ]
+      },
+      {
+        "id": "enable_night_mode",
+        "title": {
+          "en": "Enable night mode",
+          "nl": "Activeer nacht modus"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_uri=homey:app:com.milight&driver_id=rgbw_bulb"
+          }
+        ]
+      },
+      {
+        "id": "enable_night_mode_rgbww",
+        "title": {
+          "en": "Enable night mode",
+          "nl": "Activeer nacht modus"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_uri=homey:app:com.milight&driver_id=rgbww_bulb"
+          }
+        ]
+      },
+      {
+        "id": "set_color_rgb_bulb",
+        "title": {
+          "en": "Set a color",
+          "nl": "Stel een kleur in"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_uri=homey:app:com.milight&driver_id=rgb_bulb"
+          },
+          {
+            "name": "color",
+            "type": "color",
+            "filter": "driver_uri=homey:app:com.milight&driver_id=rgb_bulb"
+          }
+        ]
+      },
+      {
+        "id": "set_color_rgb",
+        "title": {
+          "en": "Set a color",
+          "nl": "Stel een kleur in"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_uri=homey:app:com.milight&driver_id=rgbw_bulb"
+          },
+          {
+            "name": "color",
+            "type": "color",
+            "filter": "driver_uri=homey:app:com.milight&driver_id=rgbw_bulb"
+          }
+        ]
+      },
+      {
+        "id": "white_mode",
+        "title": {
+          "en": "Enable white mode",
+          "nl": "Activeer wit modus"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_uri=homey:app:com.milight&driver_id=rgbw_bulb"
+          }
+        ]
+      },
+      {
+        "id": "white_mode_rgbww_bulb",
+        "title": {
+          "en": "Enable white mode",
+          "nl": "Activeer wit modus"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_uri=homey:app:com.milight&driver_id=rgbww_bulb"
+          }
+        ]
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "id": "8_zone_controller",
+      "name": {
+        "en": "8-Zone Controller",
+        "nl": "8-Zone Controller"
+      },
+      "images": {
+        "large": "./drivers/8_zone_controller/assets/images/large.jpg",
+        "small": "./drivers/8_zone_controller/assets/images/small.jpg"
+      },
+      "class": "light",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "lan"
+      ],
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode",
+        "enableWhiteMode",
+        "enableNightMode",
+        "toggleScene"
+      ],
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true,
+            "title": {
+              "en": "Select a bridge",
+              "nl": "Selecteer een bridge"
+            }
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "options": {
+            "title": {
+              "en": "Select the zones you'd like to add",
+              "nl": "Selecteer de zones die je wil toevoegen"
+            }
+          },
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "id": "bridge_driver_type",
+          "type": "label",
+          "label": {
+            "en": "Zone type",
+            "nl": "Zone type"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_zone_number",
+          "type": "label",
+          "label": {
+            "en": "Bridge zone",
+            "nl": "Bridge zone"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_mac_address",
+          "type": "label",
+          "label": {
+            "en": "Bridge MAC address",
+            "nl": "Bridge MAC adres"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_ip_address",
+          "type": "label",
+          "label": {
+            "en": "Bridge IP address",
+            "nl": "Bridge IP adres"
+          },
+          "value": ""
+        },
+        {
+          "id": "invert_red_and_green",
+          "type": "checkbox",
+          "value": false,
+          "label": {
+            "en": "Invert red and green values",
+            "nl": "Wissel rode en groene waarden om"
+          },
+          "hint": {
+            "en": "Some Milight lights have the red and green values switched. If Homey sets a different color on your light than expected, enable this setting.",
+            "nl": "Sommige Milight lampen hebben de rode en groene waarden omgedraait. Als Homey een andere kleur instelt op de lamp dan verwacht, vink dan deze checkbox aan."
+          }
+        },
+        {
+          "id": "hue_calibration",
+          "type": "number",
+          "value": 0,
+          "attr": {
+            "min": -0.5,
+            "max": 0.5,
+            "step": 0.01
+          },
+          "label": {
+            "en": "Hue calibration",
+            "nl": "Kleur tint kalibratie"
+          },
+          "hint": {
+            "en": "Use this value to calibrate the hue value send to the device. This can be used to compensate for deviating colors.",
+            "nl": "Gebruik deze waarde om de kleur tint te kalibreren. Dit kan gebruikt worden om te compenseren voor afwijkende kleuren."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ibox_bulb",
+      "name": {
+        "en": "iBox Zone",
+        "nl": "iBox Zone"
+      },
+      "images": {
+        "large": "./drivers/ibox_bulb/assets/images/large.png",
+        "small": "./drivers/ibox_bulb/assets/images/small.png"
+      },
+      "class": "light",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "lan"
+      ],
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "enableWhiteMode"
+      ],
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "id": "bridge_driver_type",
+          "type": "label",
+          "label": {
+            "en": "Zone type",
+            "nl": "Zone type"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_zone_number",
+          "type": "label",
+          "label": {
+            "en": "Bridge zone",
+            "nl": "Bridge zone"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_mac_address",
+          "type": "label",
+          "label": {
+            "en": "Bridge MAC address",
+            "nl": "Bridge MAC adres"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_ip_address",
+          "type": "label",
+          "label": {
+            "en": "Bridge IP address",
+            "nl": "Bridge IP adres"
+          },
+          "value": ""
+        },
+        {
+          "id": "invert_red_and_green",
+          "type": "checkbox",
+          "value": false,
+          "label": {
+            "en": "Invert red and green values",
+            "nl": "Wissel rode en groene waarden om"
+          },
+          "hint": {
+            "en": "Some Milight lights have the red and green values switched. If Homey sets a different color on your light than expected, enable this setting.",
+            "nl": "Sommige Milight lampen hebben de rode en groene waarden omgedraait. Als Homey een andere kleur instelt op de lamp dan verwacht, vink dan deze checkbox aan."
+          }
+        },
+        {
+          "id": "hue_calibration",
+          "type": "number",
+          "value": 0,
+          "attr": {
+            "min": -0.5,
+            "max": 0.5,
+            "step": 0.01
+          },
+          "label": {
+            "en": "Hue calibration",
+            "nl": "Kleur tint kalibratie"
+          },
+          "hint": {
+            "en": "Use this value to calibrate the hue value send to the device. This can be used to compensate for deviating colors.",
+            "nl": "Gebruik deze waarde om de kleur tint te kalibreren. Dit kan gebruikt worden om te compenseren voor afwijkende kleuren."
+          }
+        }
+      ]
+    },
+    {
+      "id": "rgb_bulb",
+      "name": {
+        "en": "RGB Zone",
+        "nl": "RGB Zone"
+      },
+      "images": {
+        "large": "./drivers/rgb_bulb/assets/images/large.jpg",
+        "small": "./drivers/rgb_bulb/assets/images/small.jpg"
+      },
+      "class": "light",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "lan"
+      ],
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue"
+      ],
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "id": "bridge_driver_type",
+          "type": "label",
+          "label": {
+            "en": "Zone type",
+            "nl": "Zone type"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_zone_number",
+          "type": "label",
+          "label": {
+            "en": "Bridge zone",
+            "nl": "Bridge zone"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_mac_address",
+          "type": "label",
+          "label": {
+            "en": "Bridge MAC address",
+            "nl": "Bridge MAC adres"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_ip_address",
+          "type": "label",
+          "label": {
+            "en": "Bridge IP address",
+            "nl": "Bridge IP adres"
+          },
+          "value": ""
+        },
+        {
+          "id": "invert_red_and_green",
+          "type": "checkbox",
+          "value": false,
+          "label": {
+            "en": "Invert red and green values",
+            "nl": "Wissel rode en groene waarden om"
+          },
+          "hint": {
+            "en": "Some Milight lights have the red and green values switched. If Homey sets a different color on your light than expected, enable this setting.",
+            "nl": "Sommige Milight lampen hebben de rode en groene waarden omgedraait. Als Homey een andere kleur instelt op de lamp dan verwacht, vink dan deze checkbox aan."
+          }
+        },
+        {
+          "id": "hue_calibration",
+          "type": "number",
+          "value": 0,
+          "attr": {
+            "min": -0.5,
+            "max": 0.5,
+            "step": 0.01
+          },
+          "label": {
+            "en": "Hue calibration",
+            "nl": "Kleur tint kalibratie"
+          },
+          "hint": {
+            "en": "Use this value to calibrate the hue value send to the device. This can be used to compensate for deviating colors.",
+            "nl": "Gebruik deze waarde om de kleur tint te kalibreren. Dit kan gebruikt worden om te compenseren voor afwijkende kleuren."
+          }
+        }
+      ]
+    },
+    {
+      "id": "rgbw_bulb",
+      "name": {
+        "en": "RGBW Zone",
+        "nl": "RGBW Zone"
+      },
+      "images": {
+        "large": "./drivers/rgbw_bulb/assets/images/large.jpg",
+        "small": "./drivers/rgbw_bulb/assets/images/small.jpg"
+      },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "lan"
+      ],
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "enableWhiteMode",
+        "enableNightMode",
+        "toggleScene"
+      ],
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "id": "bridge_driver_type",
+          "type": "label",
+          "label": {
+            "en": "Zone type",
+            "nl": "Zone type"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_zone_number",
+          "type": "label",
+          "label": {
+            "en": "Bridge zone",
+            "nl": "Bridge zone"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_mac_address",
+          "type": "label",
+          "label": {
+            "en": "Bridge MAC address",
+            "nl": "Bridge MAC adres"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_ip_address",
+          "type": "label",
+          "label": {
+            "en": "Bridge IP address",
+            "nl": "Bridge IP adres"
+          },
+          "value": ""
+        },
+        {
+          "id": "invert_red_and_green",
+          "type": "checkbox",
+          "value": false,
+          "label": {
+            "en": "Invert red and green values",
+            "nl": "Wissel rode en groene waarden om"
+          },
+          "hint": {
+            "en": "Some Milight lights have the red and green values switched. If Homey sets a different color on your light than expected, enable this setting.",
+            "nl": "Sommige Milight lampen hebben de rode en groene waarden omgedraait. Als Homey een andere kleur instelt op de lamp dan verwacht, vink dan deze checkbox aan."
+          }
+        },
+        {
+          "id": "hue_calibration",
+          "type": "number",
+          "value": 0,
+          "attr": {
+            "min": -0.5,
+            "max": 0.5,
+            "step": 0.01
+          },
+          "label": {
+            "en": "Hue calibration",
+            "nl": "Kleur tint kalibratie"
+          },
+          "hint": {
+            "en": "Use this value to calibrate the hue value send to the device. This can be used to compensate for deviating colors.",
+            "nl": "Gebruik deze waarde om de kleur tint te kalibreren. Dit kan gebruikt worden om te compenseren voor afwijkende kleuren."
+          }
+        }
+      ]
+    },
+    {
+      "id": "rgbww_bulb",
+      "name": {
+        "en": "RGBWW Zone",
+        "nl": "RGBWW Zone"
+      },
+      "images": {
+        "large": "./drivers/rgbww_bulb/assets/images/large.jpg",
+        "small": "./drivers/rgbww_bulb/assets/images/small.jpg"
+      },
+      "class": "light",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "lan"
+      ],
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode",
+        "enableWhiteMode",
+        "enableNightMode",
+        "toggleScene"
+      ],
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true,
+            "title": {
+              "en": "Select a bridge",
+              "nl": "Selecteer een bridge"
+            }
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "options": {
+            "title": {
+              "en": "Select the zones you'd like to add",
+              "nl": "Selecteer de zones die je wil toevoegen"
+            }
+          },
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "id": "bridge_driver_type",
+          "type": "label",
+          "label": {
+            "en": "Zone type",
+            "nl": "Zone type"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_zone_number",
+          "type": "label",
+          "label": {
+            "en": "Bridge zone",
+            "nl": "Bridge zone"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_mac_address",
+          "type": "label",
+          "label": {
+            "en": "Bridge MAC address",
+            "nl": "Bridge MAC adres"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_ip_address",
+          "type": "label",
+          "label": {
+            "en": "Bridge IP address",
+            "nl": "Bridge IP adres"
+          },
+          "value": ""
+        },
+        {
+          "id": "invert_red_and_green",
+          "type": "checkbox",
+          "value": false,
+          "label": {
+            "en": "Invert red and green values",
+            "nl": "Wissel rode en groene waarden om"
+          },
+          "hint": {
+            "en": "Some Milight lights have the red and green values switched. If Homey sets a different color on your light than expected, enable this setting.",
+            "nl": "Sommige Milight lampen hebben de rode en groene waarden omgedraait. Als Homey een andere kleur instelt op de lamp dan verwacht, vink dan deze checkbox aan."
+          }
+        },
+        {
+          "id": "hue_calibration",
+          "type": "number",
+          "value": 0,
+          "attr": {
+            "min": -0.5,
+            "max": 0.5,
+            "step": 0.01
+          },
+          "label": {
+            "en": "Hue calibration",
+            "nl": "Kleur tint kalibratie"
+          },
+          "hint": {
+            "en": "Use this value to calibrate the hue value send to the device. This can be used to compensate for deviating colors.",
+            "nl": "Gebruik deze waarde om de kleur tint te kalibreren. Dit kan gebruikt worden om te compenseren voor afwijkende kleuren."
+          }
+        }
+      ]
+    },
+    {
+      "id": "white_bulb",
+      "name": {
+        "en": "White Zone",
+        "nl": "Wit Zone"
+      },
+      "images": {
+        "large": "./drivers/white_bulb/assets/images/large.jpg",
+        "small": "./drivers/white_bulb/assets/images/small.jpg"
+      },
+      "class": "light",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "lan"
+      ],
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature",
+        "enableNightMode"
+      ],
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "id": "bridge_driver_type",
+          "type": "label",
+          "label": {
+            "en": "Zone type",
+            "nl": "Zone type"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_zone_number",
+          "type": "label",
+          "label": {
+            "en": "Bridge zone",
+            "nl": "Bridge zone"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_mac_address",
+          "type": "label",
+          "label": {
+            "en": "Bridge MAC address",
+            "nl": "Bridge MAC adres"
+          },
+          "value": ""
+        },
+        {
+          "id": "bridge_ip_address",
+          "type": "label",
+          "label": {
+            "en": "Bridge IP address",
+            "nl": "Bridge IP adres"
+          },
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "enableNightMode": {
+      "type": "boolean",
+      "title": {
+        "en": "Enable night mode",
+        "nl": "Activeer nacht modus"
+      },
+      "setable": true
+    },
+    "enableWhiteMode": {
+      "type": "boolean",
+      "title": {
+        "en": "Enable white mode",
+        "nl": "Activeer wit modus"
+      },
+      "setable": true
+    },
+    "toggleScene": {
+      "type": "boolean",
+      "title": {
+        "en": "Toggle effect mode",
+        "nl": "Activeer effect modus"
+      },
+      "setable": true
+    }
   }
 }

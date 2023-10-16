@@ -1,6 +1,6 @@
 {
   "id": "com.helloroad.milight",
-  "version": "4.1.0",
+  "version": "4.2.0",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "platforms": [
@@ -25,8 +25,8 @@
     "name": "Vincent Steenhoute",
     "email": "vincent@steen.fr"
   },
- "homepage": "https://github.com/overciv/homey-milight-app",
- "source": "https://github.com/overciv/homey-milight-app",
+  "homepage": "https://github.com/overciv/homey-milight-app",
+  "source": "https://github.com/overciv/homey-milight-app",
   "contributors": {
     "developers": [
       {
