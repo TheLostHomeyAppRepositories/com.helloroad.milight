@@ -9,7 +9,7 @@
   "name": {
     "en": "MiLight 2023"
   },
-  "brandColor": "#FF0000",
+  "brandColor": "#2c41be",
   "description": {
     "en": "milight leds app upgraded to sdk v3 and compatible with homey pro 2023"
   },
@@ -24,5 +24,14 @@
   "author": {
     "name": "Vincent Steenhoute",
     "email": "vincent@steen.fr"
+  },
+ "homepage": "https://github.com/overciv/homey-milight-app",
+ "source": "https://github.com/overciv/homey-milight-app",
+  "contributors": {
+    "developers": [
+      {
+        "name": "HVerkiel"
+      }
+    ]
   }
 }
