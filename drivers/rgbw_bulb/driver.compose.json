@@ -15,7 +15,6 @@
     "onoff",
     "dim",
     "light_hue",
-    "light_mode",
     "enableWhiteMode",
     "enableNightMode",
     "toggleScene"
