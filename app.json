@@ -1,0 +1,37 @@
+{
+  "id": "com.helloroad.milight",
+  "version": "4.1.0",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "MiLight 2023"
+  },
+  "brandColor": "#2c41be",
+  "description": {
+    "en": "milight leds app upgraded to sdk v3 and compatible with homey pro 2023"
+  },
+  "category": [
+    "lights"
+  ],
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.jpg",
+    "large": "/assets/images/large.jpg"
+  },
+  "author": {
+    "name": "Vincent Steenhoute",
+    "email": "vincent@steen.fr"
+  },
+ "homepage": "https://github.com/overciv/homey-milight-app",
+ "source": "https://github.com/overciv/homey-milight-app",
+  "contributors": {
+    "developers": [
+      {
+        "name": "HVerkiel"
+      }
+    ]
+  }
+}
