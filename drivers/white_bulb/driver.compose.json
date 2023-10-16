@@ -1,0 +1,86 @@
+{
+  "id": "white_bulb",
+  "name": {
+    "en": "White Zone",
+    "nl": "Wit Zone"
+  },
+  "images": {
+    "large": "./drivers/white_bulb/assets/images/large.jpg",
+    "small": "./drivers/white_bulb/assets/images/small.jpg"
+  },
+  "class": "light",
+  "platforms": ["local"],
+  "connectivity": ["lan"],
+  "capabilities": [
+    "onoff",
+    "dim",
+    "light_temperature",
+    "enableNightMode"
+  ],
+  "capabilitiesOptions": {
+    "onoff": {
+      "setOnDim": false
+    }
+  },
+  "pair": [
+    {
+      "id": "list_bridges",
+      "template": "list_devices",
+      "options": {
+        "singular": true
+      },
+      "navigation": {
+        "next": "list_devices"
+      }
+    },
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices"
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ],
+  "settings": [
+    {
+      "id": "bridge_driver_type",
+      "type": "label",
+      "label": {
+        "en": "Zone type",
+        "nl": "Zone type"
+      },
+      "value": ""
+    },
+    {
+      "id": "bridge_zone_number",
+      "type": "label",
+      "label": {
+        "en": "Bridge zone",
+        "nl": "Bridge zone"
+      },
+      "value": ""
+    },
+    {
+      "id": "bridge_mac_address",
+      "type": "label",
+      "label": {
+        "en": "Bridge MAC address",
+        "nl": "Bridge MAC adres"
+      },
+      "value": ""
+    },
+    {
+      "id": "bridge_ip_address",
+      "type": "label",
+      "label": {
+        "en": "Bridge IP address",
+        "nl": "Bridge IP adres"
+      },
+      "value": ""
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+     {
+        "id": "white_mode_rgbww_bulb",
+        "title": {
+          "en": "Enable white mode",
+          "nl": "Activeer wit modus"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_uri=homey:app:com.milight&driver_id=rgbww_bulb"
+          }
+        ]
+      }

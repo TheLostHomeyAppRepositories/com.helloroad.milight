@@ -21,6 +21,11 @@ Mi•Light devices are also known as:
 - Kreuzer
 
 ### Changelog
+v4.1.0
+- Code forked from https://github.com/HVerkiel/com.milight
+- Rewrite code for Homey SDK v3 and test with Homey Pro 2023  
+- Known Issue: FLow actions does not work with rgbww_bulb driver yet, needs some extra rewrite, will be address in the next version.
+
 v3.2.2
 - Minor crash preventive fixes
 

@@ -1,0 +1,14 @@
+{
+    "id": "enable_night_mode_rgbww",
+    "title": {
+      "en": "Enable night mode",
+      "nl": "Activeer nacht modus"
+    },
+    "args": [
+      {
+        "name": "device",
+        "type": "device",
+        "filter": "driver_uri=homey:app:com.milight&driver_id=rgbww_bulb"
+      }
+    ]
+  }

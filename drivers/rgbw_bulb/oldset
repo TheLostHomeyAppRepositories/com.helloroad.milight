@@ -1,0 +1,9 @@
+[
+  {
+    "id": "bridge_zone_number",
+    "type": "text",
+    "label": { "en": "Bridge Zone" },
+    "value": "1",
+    "hint": { "en": "The zone this device control" }
+  }
+]

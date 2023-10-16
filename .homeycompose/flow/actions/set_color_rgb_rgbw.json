@@ -1,0 +1,19 @@
+{
+    "id": "set_color_rgb",
+    "title": {
+      "en": "Set a color",
+      "nl": "Stel een kleur in"
+    },
+    "args": [
+      {
+        "name": "device",
+        "type": "device",
+        "filter": "driver_uri=homey:app:com.milight&driver_id=rgbw_bulb"
+      },
+      {
+        "name": "color",
+        "type": "color",
+        "filter": "driver_uri=homey:app:com.milight&driver_id=rgbw_bulb"
+      }
+    ]
+  }

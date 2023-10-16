@@ -13,7 +13,7 @@ class MilightApp extends Homey.App {
       log: ((...args) => this.log('[BridgeManager]', ...args)),
       error: ((...args) => this.error('[BridgeManager]', ...args)),
     });
-    Homey.on('unload', this.onUnload.bind(this));
+    this.homey.on('unload', this.onUnload.bind(this));
   }
 
   get BridgeManager() {

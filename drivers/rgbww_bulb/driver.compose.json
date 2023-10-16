@@ -1,0 +1,132 @@
+{
+  "id": "rgbww_bulb",
+  "name": {
+    "en": "RGBWW Zone",
+    "nl": "RGBWW Zone"
+  },
+  "images": {
+    "large": "./drivers/rgbww_bulb/assets/images/large.jpg",
+    "small": "./drivers/rgbww_bulb/assets/images/small.jpg"
+  },
+  "class": "light",
+  "platforms": ["local"],
+  "connectivity": ["lan"],
+  "capabilities": [
+    "onoff",
+    "dim",
+    "light_hue",
+    "light_saturation",
+    "light_temperature",
+    "light_mode",
+    "enableWhiteMode",
+    "enableNightMode",
+    "toggleScene"
+  ],
+  "capabilitiesOptions": {
+    "onoff": {
+      "setOnDim": false
+    }
+  },
+  "pair": [
+    {
+      "id": "list_bridges",
+      "template": "list_devices",
+      "options": {
+        "singular": true,
+        "title": {
+          "en": "Select a bridge",
+          "nl": "Selecteer een bridge"
+        }
+      },
+      "navigation": {
+        "next": "list_devices"
+      }
+    },
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "options": {
+        "title": {
+          "en": "Select the zones you'd like to add",
+          "nl": "Selecteer de zones die je wil toevoegen"
+        }
+      },
+      "navigation": {
+        "next": "add_devices"
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ],
+  "settings": [
+    {
+      "id": "bridge_driver_type",
+      "type": "label",
+      "label": {
+        "en": "Zone type",
+        "nl": "Zone type"
+      },
+      "value": ""
+    },
+    {
+      "id": "bridge_zone_number",
+      "type": "label",
+      "label": {
+        "en": "Bridge zone",
+        "nl": "Bridge zone"
+      },
+      "value": ""
+    },
+    {
+      "id": "bridge_mac_address",
+      "type": "label",
+      "label": {
+        "en": "Bridge MAC address",
+        "nl": "Bridge MAC adres"
+      },
+      "value": ""
+    },
+    {
+      "id": "bridge_ip_address",
+      "type": "label",
+      "label": {
+        "en": "Bridge IP address",
+        "nl": "Bridge IP adres"
+      },
+      "value": ""
+    },
+    {
+      "id": "invert_red_and_green",
+      "type": "checkbox",
+      "value": false,
+      "label": {
+        "en": "Invert red and green values",
+        "nl": "Wissel rode en groene waarden om"
+      },
+      "hint": {
+        "en": "Some Milight lights have the red and green values switched. If Homey sets a different color on your light than expected, enable this setting.",
+        "nl": "Sommige Milight lampen hebben de rode en groene waarden omgedraait. Als Homey een andere kleur instelt op de lamp dan verwacht, vink dan deze checkbox aan."
+      }
+    },
+    {
+      "id": "hue_calibration",
+      "type": "number",
+      "value": 0,
+      "attr": {
+        "min": -0.5,
+        "max": 0.5,
+        "step": 0.01
+      },
+      "label": {
+        "en": "Hue calibration",
+        "nl": "Kleur tint kalibratie"
+      },
+      "hint": {
+        "en": "Use this value to calibrate the hue value send to the device. This can be used to compensate for deviating colors.",
+        "nl": "Gebruik deze waarde om de kleur tint te kalibreren. Dit kan gebruikt worden om te compenseren voor afwijkende kleuren."
+      }
+    }
+  ]
+}

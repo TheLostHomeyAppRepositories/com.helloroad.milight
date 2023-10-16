@@ -1,0 +1,8 @@
+{
+      "type": "boolean",
+      "title": {
+        "en": "Enable night mode",
+        "nl": "Activeer nacht modus"
+      },
+      "setable": true
+}

@@ -1,0 +1,14 @@
+{
+    "id": "disco_mode_slower_rgbww",
+    "title": {
+      "en": "Speed down disco mode",
+      "nl": "Vertraag effect modus"
+    },
+    "args": [
+      {
+        "name": "device",
+        "type": "device",
+        "filter": "driver_uri=homey:app:com.milight&driver_id=rgbww_bulb"
+      }
+    ]
+  }

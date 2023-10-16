@@ -1,0 +1,88 @@
+{
+    "id": "disco_mode_specific",
+    "title": {
+      "en": "Enable specific effect mode",
+      "nl": "Activeer specifieke effect modus"
+    },
+    "hint": {
+      "en": "Setting a specific effect mode is only possible for RGBW(W) bulbs connected to the new iBox (with built-in light).",
+      "nl": "Het instellen van eeen specifieke effect modus is alleen mogelijk bij RGBW(W) lampen die zijn verbonden met de nieuwe iBox (met ingebouwde lamp)."
+    },
+    "args": [
+      {
+        "name": "mode",
+        "type": "dropdown",
+        "value": "1",
+        "values": [
+          {
+            "id": "1",
+            "label": {
+              "en": "Effect mode 1",
+              "nl": "Effect modus 1"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Effect mode 2",
+              "nl": "Effect modus 2"
+            }
+          },
+          {
+            "id": "3",
+            "label": {
+              "en": "Effect mode 3",
+              "nl": "Effect modus 3"
+            }
+          },
+          {
+            "id": "4",
+            "label": {
+              "en": "Effect mode 4",
+              "nl": "Effect modus 4"
+            }
+          },
+          {
+            "id": "5",
+            "label": {
+              "en": "Effect mode 5",
+              "nl": "Effect modus 5"
+            }
+          },
+          {
+            "id": "6",
+            "label": {
+              "en": "Effect mode 6",
+              "nl": "Effect modus 6"
+            }
+          },
+          {
+            "id": "7",
+            "label": {
+              "en": "Effect mode 7",
+              "nl": "Effect modus 7"
+            }
+          },
+          {
+            "id": "8",
+            "label": {
+              "en": "Effect mode 8",
+              "nl": "Effect modus 8"
+            }
+          },
+          {
+            "id": "9",
+            "label": {
+              "en": "Effect mode 9",
+              "nl": "Effect modus 9"
+            }
+          }
+        ]
+      },
+      {
+        "name": "device",
+        "type": "device",
+        "filter": "driver_uri=homey:app:com.milight&driver_id=rgbw_bulb"
+      }
+    ]
+  }

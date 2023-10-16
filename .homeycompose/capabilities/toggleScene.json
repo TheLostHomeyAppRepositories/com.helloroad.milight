@@ -1,0 +1,8 @@
+{
+      "type": "boolean",
+      "title": {
+        "en": "Toggle effect mode",
+        "nl": "Activeer effect modus"
+      },
+      "setable": true
+}
