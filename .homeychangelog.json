@@ -1,5 +1,8 @@
 {
   "4.1.0": {
     "en": "Rewrite code for SDK v3 and compatible with Homey Pro 2023"
+  },
+  "4.2.1": {
+    "en": "Fixed app manifest details"
   }
 }
