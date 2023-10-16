@@ -4,5 +4,8 @@
   },
   "4.2.1": {
     "en": "Fixed app manifest details"
+  },
+  "4.2.3": {
+    "en": "Fixed minor crash due to missing capability light_mode for rgbw "
   }
 }
