@@ -7,5 +7,14 @@
   },
   "4.2.3": {
     "en": "Fixed minor crash due to missing capability light_mode for rgbw "
+  },
+  "4.2.4": {
+    "en": "Fix minor crash"
+  },
+  "4.2.5": {
+    "en": "Updated icons, title and description"
+  },
+  "4.2.6": {
+    "en": "New icon and color"
   }
 }

@@ -1,18 +1,18 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "com.helloroad.milight",
-  "version": "4.2.3",
+  "version": "4.2.6",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "platforms": [
     "local"
   ],
   "name": {
-    "en": "MiLight 2023"
+    "en": "Mi-Light"
   },
-  "brandColor": "#2c41be",
+  "brandColor": "#E76B34",
   "description": {
-    "en": "milight leds app upgraded to sdk v3 and compatible with homey pro 2023"
+    "en": "Control your Mi-Light leds through your WiFi bridge"
   },
   "category": [
     "lights"
@@ -792,7 +792,6 @@
         "onoff",
         "dim",
         "light_hue",
-        "light_mode",
         "enableWhiteMode",
         "enableNightMode",
         "toggleScene"
