@@ -1,20 +1,20 @@
 {
-  "name": "com.milight",
-  "version": "1.0.0",
+  "name": "com.helloroad.milight",
+  "version": "4.2.9",
   "description": "Connect your MiLight (EasyBulb) light bulbs with Homey.",
   "main": "app.js",
   "dependencies": {
-    "homey-log": "1.0.4",
-    "node-milight-promise": "0.3.2",
-    "onecolor": "3.0.4"
+    "homey-log": "2.1.0",
+    "node-milight-promise": "github:mwittig/node-milight-promise#master",
+    "onecolor": "4.0.0"
   },
   "scripts": {
-    "run": "homeyConfig compose && athom project --run",
+    "run": "homey app run --remote",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/athombv/com.milight.git"
+    "url": "git+https://github.com/overciv/homey-milight-app.git"
   },
   "engines": {
     "node": ">=8.0.0"
@@ -22,7 +22,7 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/athombv/com.milight/issues"
+    "url": "https://github.com/overciv/homey-milight-app"
   },
-  "homepage": "https://github.com/athombv/com.milight#readme"
+  "homepage": "https://github.com/overciv/homey-milight-app#readme"
 }
